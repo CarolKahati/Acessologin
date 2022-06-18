@@ -1,136 +1,75 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-body{
+body {
     margin: 0;
-    font-family:  'Permanent Marker', cursive;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url(Tbbg.gif);
 }
-body *{
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background-color: rgba(0,0,0,0.7);
     box-sizing: border-box;
-}
-.main-login{
-    width: 200vw;
-    height: 900vw;
-    background: rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.left-login{
-    width: 50vw;
-    height: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    box-shadow: rgba(0,0,0,0.4);
+    border-radius: 10px;
 }
 
-.left-login > h1{
-   
-   font-size:  3vw;
-    color:rgb(65, 3, 124);
+.box h2{
+    margin: 0 0 30px;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
 
-.left-login-image{
-    width: 35vw;
-    padding: 250;
+.box .inputbox {
+    position: relative;
+
+}
+
+.box .inputbox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgb(4, 242, 0);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(9, 255, 0);
+    outline: none;
+    background-color: transparent;
+}
+
+.box .inputbox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgb(0, 255, 145);
+    pointer-events: none;
+    transition: .5s;
+
+}
+
+.box .inputbox input:focus ~ label,
+.box .inputbox input:valid ~ label {
+    top: -18px;
+    left: 0;
+    color: rgb(34, 255, 0);
+    font-size: 12px;
     
 }
 
-.right-login{
-    width: 50vw;
-    height: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-login{
-    width: 60% ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 40px;
-    background: black;
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px purple;
-}
-.card-login > h1 {
-    color: blueviolet;
-    font-weight: 800;
-    margin: 0;
-}
-.textfield{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 10px 0px;
-}
-.textfield > input{
-    width: 100%;
+.box .input [type="submit"] { 
+    background-color: transparent;
     border: none;
-    border-radius: 10px;
-    padding: 15px;
-    background: rgb(4, 255, 0);
-    color: purple;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px purple;
     outline: none;
-    box-sizing: border-box;
-}
-
-.textfield > label{
-    color: purple;
-    margin-bottom: 10px;
-}
-
-.textfield > input::placeholder{
-    color: purple;
-}
-
-.btn-login{
-    width: 50%;
-    padding: 16px 0px;
-    margin: 25px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 4px;
-    color: rgb(153, 255, 0);
-    background: purple;
+    color: rgb(47, 54, 255);
+    background-color: rgb(0, 0, 255);
+    padding: 10px 20px;
     cursor: pointer;
-    box-shadow: 0px 10px 40px 12px green ;
-}
-
-@media onli screen and (max-widht:950px){
-    .card-login{
-    width: 85%
-
-    }
-}
-@media onli screen and (max-width: 600px){
-    .main-login{
-    flex-direction:column;
-    }
-}
-.left-login > h1{
-    display: none;
-}
-.left-login{
-    width: 100%;
-    height: auto;
-}
-.right-login{
-    width: 100%;
-    height: auto;
-}
-.left-login-image{
-    width: 50vw;
-}
-.card-login{
-    width: 90;
+    border-radius: 5px;
 }

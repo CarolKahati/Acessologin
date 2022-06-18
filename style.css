@@ -9,7 +9,7 @@ body *{
 }
 .main-login{
     width: 200vw;
-    height: 500vw;
+    height: 900vw;
     background: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
